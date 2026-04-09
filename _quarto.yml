@@ -1,0 +1,39 @@
+jupyter: python3
+project:
+  type: book
+  output-dir: docs
+
+site-url: https://codecollectiveKHM.github.com/knowledgehub
+
+book:
+  title: "Code Collective Knowledge Hub"
+  page-navigation: false
+  chapters:
+      - index.qmd
+      - pages/artisticresearch.qmd
+      - pages/inventory.qmd 
+
+# bibliography: src/bibliography.json
+
+format: 
+  # pdf:
+  #   documentclass: scrreprt
+  # textile:
+  html: 
+    theme: 
+      - cosmo
+      # - brand
+      - src/style.scss
+    toc: true
+    toc-title: "Contents"
+    code-fold: true
+    code-annotations: hover
+    css:
+      - src/style.css 
+    number-sections: false
+    reference-location: margin
+    toc-location: left
+
+# execute:
+  # freeze: auto
+#   debug: true

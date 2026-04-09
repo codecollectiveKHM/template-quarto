@@ -1,0 +1,23 @@
+## MIRROR ACTION GITHUB > CODEBERG
+
+# update then move this file to folder '.github/workflows/' in order to run the action
+
+on: 
+  workflow_dispatch:
+  push:
+    branches: ['**']
+    tags: ['**']
+
+jobs:
+  mirror:
+      runs-on: ubuntu-latest
+      timeout-minutes: 5
+      steps:
+        - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - uses: yesolutions/mirror-action@master
+          with:
+            REMOTE: 'https://codeberg.org/codecollective/<<REPONAME>>.git' # make sure to update the repo name to the correct repo you want to mirror after creating it on Codeberg!!
+            GIT_USERNAME: <<CODEBERGUSERNAME>>
+            GIT_PASSWORD: ${{ secrets.<<CODEBERGPASSWORDSECRET>> }} # create a secret in the github settings, name it the same thing as the variable here. the value of the secret should be your codeberg password so that github can verify you
