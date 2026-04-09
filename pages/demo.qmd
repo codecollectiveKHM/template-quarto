@@ -1,5 +1,5 @@
 ---
-title: KHM Code Collective Template
+title: Demo Page
 page-navigation: false
 toc: false
 # date: 9 Apr 2026

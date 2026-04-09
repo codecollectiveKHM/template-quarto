@@ -3,15 +3,14 @@ project:
   type: book
   output-dir: docs
 
-site-url: https://codecollectiveKHM.github.com/knowledgehub
+site-url: https://codecollectiveKHM.github.com/template-quarto
 
 book:
-  title: "Code Collective Knowledge Hub"
+  title: "Template Quarto"
   page-navigation: false
   chapters:
       - index.qmd
-      - pages/artisticresearch.qmd
-      - pages/inventory.qmd 
+      - pages/demo.qmd
 
 # bibliography: src/bibliography.json
 
